@@ -3,12 +3,13 @@ default: &default
   host: localhost
   encoding: unicode
   pool: 30
-  username: pguser
-  password: pguser
+
 
 development:
   <<: *default
   database: contactbook_development
+  username: pguser
+  password: pguser
 
 test:
   <<: *default
@@ -17,3 +18,5 @@ test:
 production:
   <<: *default
   database: contactbook_production
+  username: contactbook
+  password: password
