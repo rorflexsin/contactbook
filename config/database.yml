@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  pool: 30
+  username: pguser
+  password: pguser
+
+development:
+  <<: *default
+  database: contactbook_development
+
+test:
+  <<: *default
+  database: contactbook_development
+
+production:
+  <<: *default
+  database: contactbook_production
